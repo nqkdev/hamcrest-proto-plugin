@@ -1,8 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
-  - openjdk8
+  - openjdk7
 
 after_success:
   # integration test
-  - cd it/sample; mvn test
+  - cd it/sample; mvn test;
