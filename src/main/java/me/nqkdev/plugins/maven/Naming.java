@@ -1,4 +1,4 @@
-package io.bitsensor.plugins.maven;
+package me.nqkdev.plugins.maven;
 
 public class Naming {
     static String normalize(CharSequence name) {

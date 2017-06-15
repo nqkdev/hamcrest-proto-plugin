@@ -1,4 +1,4 @@
-package io.bitsensor.plugins.maven;
+package me.nqkdev.plugins.maven;
 
 import io.protostuff.compiler.parser.LocalFileReader;
 import io.protostuff.generator.GeneratorException;

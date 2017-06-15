@@ -1,4 +1,4 @@
-package io.bitsensor.plugins.maven;
+package me.nqkdev.plugins.maven;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -25,7 +25,7 @@ import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 
-import static io.bitsensor.plugins.maven.ClassUtils.findClassByName;
+import static me.nqkdev.plugins.maven.ClassUtils.findClassByName;
 import static io.protostuff.generator.java.MessageFieldUtil.*;
 
 /**

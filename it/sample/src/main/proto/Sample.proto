@@ -1,7 +1,7 @@
 syntax = "proto3";
 package proto;
 
-option java_package = "io.bitsensor.plugins.it";
+option java_package = "me.nqkdev.plugins.it";
 option java_outer_classname = "SampleMesage";
 
 import public "ImportSample.proto";

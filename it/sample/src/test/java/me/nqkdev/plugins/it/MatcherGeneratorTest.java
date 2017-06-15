@@ -1,15 +1,15 @@
-package io.bitsensor.plugins.it;
+package me.nqkdev.plugins.it;
 
 import different.packageName.ImportSampleMatchers;
 import different.packageName.ImportSampleOuterClass.ImportSample;
-import io.bitsensor.plugins.it.SampleMesage.Sample;
-import io.bitsensor.plugins.it.SampleMesage.Sample.SubSample;
+import me.nqkdev.plugins.it.SampleMesage.Sample;
+import me.nqkdev.plugins.it.SampleMesage.Sample.SubSample;
 import org.hamcrest.core.IsCollectionContaining;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static io.bitsensor.plugins.it.SampleMatchers.*;
+import static me.nqkdev.plugins.it.SampleMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.hamcrest.collection.IsMapContaining.hasEntry;

@@ -1,4 +1,4 @@
-package io.bitsensor.plugins.maven;
+package me.nqkdev.plugins.maven;
 
 import org.reflections.ReflectionUtils;
 import org.reflections.Reflections;

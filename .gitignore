@@ -114,7 +114,6 @@ nbbuild/
 dist/
 nbdist/
 nbactions.xml
-nb-io.bitsensor.spring.configuration.xml
 .nb-gradle/
 ### Linux template
 *~
