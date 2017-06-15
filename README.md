@@ -9,7 +9,7 @@ Usage
 <plugin>
     <groupId>me.nqkdev.plugins</groupId>
     <artifactId>hamcrest-proto-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <executions>
         <execution>
             <id>generate-hamcrest-matchers</id>
