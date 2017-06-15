@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.nqkdev.plugins</groupId>
     <artifactId>hamcrest-proto-plugin</artifactId>
-    <packaging>maven-plugin</packaging>
-    <version>1.0</version>
+    <packaging>${packaging.type}</packaging>
+    <version>1.0-SNAPSHOT</version>
 
     <!-- INFO -->
 
@@ -23,7 +23,7 @@
         <developer>
             <name>Khanh Nguyen</name>
             <email>qknguyendev@gmail.com</email>
-            <url>git.nqkdev.me</url>
+            <url>http://git.nqkdev.me</url>
         </developer>
     </developers>
 
@@ -48,6 +48,7 @@
 
 
     <properties>
+        <packaging.type>maven-plugin</packaging.type>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <protobuf.version>3.2.0</protobuf.version>
     </properties>
@@ -158,11 +159,18 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-
     <profiles>
+        <profile>
+            <id>develop</id>
+            <properties>
+                <packaging.type>pom</packaging.type>
+            </properties>
+            <modules>
+                <module>it/sample</module>
+            </modules>
+        </profile>
         <profile>
             <id>sign</id>
             <build>
@@ -186,9 +194,6 @@
         </profile>
         <profile>
             <id>build-extras</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
