@@ -1,0 +1,26 @@
+syntax = "proto3";
+package proto;
+
+option java_package = "io.bitsensor.plugins.it";
+option java_outer_classname = "SampleMesage";
+
+import public "ImportSample.proto";
+
+message Sample {
+    string simpleString = 1;
+    int64 simpleInteger = 2;
+    repeated string repeatedString = 3;
+    map<string, string> mapString = 4;
+
+    // Sub sample
+    SubSample subSample = 5;
+    repeated SubSample repeatedSubSample = 6;
+    map<string, SubSample> mapSubSample = 7;
+
+    message SubSample {
+        string subSample = 1;
+    }
+
+    // Import sample
+    ImportSample importSample = 8;
+}
