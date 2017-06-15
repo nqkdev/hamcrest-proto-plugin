@@ -1,5 +1,6 @@
 Hamcrest matcher generator for Protocol Buffers
 --
+[![Build Status](https://travis-ci.org/nqkdev/hamcrest-proto-plugin.svg?branch=master)](https://travis-ci.org/nqkdev/hamcrest-proto-plugin)
 
 Usage
 --

@@ -46,10 +46,10 @@ public class GeneratorMojo extends AbstractMojo {
     @Parameter
     private File target;
 
-    @Component
+    @Parameter(defaultValue = "${project}", readonly = true)
     private MavenProject project;
 
-    @Component
+    @Parameter(defaultValue = "${session}", readonly = true)
     private MavenSession session;
 
     @Component
@@ -75,9 +75,6 @@ public class GeneratorMojo extends AbstractMojo {
         Generator generator = new Generator(new LocalFileReader(sourcePath));
 
         protoFiles.forEach(s -> generator.generateMatchers(s, output));
-
-        // Adds all new generated sources to project
-//        addGeneratedSourcesToProject(output);
     }
 
     private void addCompiledClassesToClasspath() {
@@ -171,14 +168,5 @@ public class GeneratorMojo extends AbstractMojo {
         }
         getLog().debug("output = " + output);
         return output;
-    }
-
-    private void addGeneratedSourcesToProject(String output) {
-        // Include generated directory to the list of compilation sources
-        if (TEST_COMPILE.id().equals(execution.getLifecyclePhase())) {
-            project.addTestCompileSourceRoot(output);
-        } else {
-            project.addCompileSourceRoot(output);
-        }
     }
 }
