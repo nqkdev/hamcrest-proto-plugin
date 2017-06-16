@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.nqkdev.plugins</groupId>
     <artifactId>hamcrest-proto-plugin</artifactId>
-    <packaging>${packaging.type}</packaging>
+    <packaging>maven-plugin</packaging>
     <version>1.1-SNAPSHOT</version>
 
     <!-- INFO -->
@@ -48,7 +48,6 @@
 
 
     <properties>
-        <packaging.type>maven-plugin</packaging.type>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <protobuf.version>3.2.0</protobuf.version>
     </properties>
@@ -162,15 +161,6 @@
         </plugins>
     </build>
     <profiles>
-        <profile>
-            <id>develop</id>
-            <properties>
-                <packaging.type>pom</packaging.type>
-            </properties>
-            <modules>
-                <module>it/sample</module>
-            </modules>
-        </profile>
         <profile>
             <id>sign</id>
             <build>
