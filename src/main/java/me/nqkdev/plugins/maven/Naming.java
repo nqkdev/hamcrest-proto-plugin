@@ -1,8 +1,14 @@
 package me.nqkdev.plugins.maven;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Naming {
     static String normalize(CharSequence name) {
-        return capitalize(name.toString().replaceFirst("^_", ""))
+        return capitalize(
+                Arrays.stream(name.toString().split("_"))
+                        .map(Naming::capitalize)
+                        .collect(Collectors.joining()))
                 .replaceFirst("^Class$", "Class_");
     }
 

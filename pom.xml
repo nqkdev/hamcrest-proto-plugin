@@ -4,7 +4,7 @@
     <groupId>me.nqkdev.plugins</groupId>
     <artifactId>hamcrest-proto-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <!-- INFO -->
 
@@ -23,7 +23,7 @@
         <developer>
             <name>Khanh Nguyen</name>
             <email>qknguyendev@gmail.com</email>
-            <url>git.nqkdev.me</url>
+            <url>http://git.nqkdev.me</url>
         </developer>
     </developers>
 
@@ -158,10 +158,8 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-
     <profiles>
         <profile>
             <id>sign</id>
@@ -186,9 +184,6 @@
         </profile>
         <profile>
             <id>build-extras</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
