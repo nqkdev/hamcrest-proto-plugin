@@ -4,5 +4,5 @@ package proto;
 option java_package = "different.packageName";
 
 message ImportSample {
-    int32 importSampleInteger = 1;
+    int32 import_sample_integer = 1;
 }
